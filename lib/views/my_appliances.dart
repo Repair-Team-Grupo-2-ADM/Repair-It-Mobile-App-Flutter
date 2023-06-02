@@ -34,7 +34,7 @@ class _MyAppliancesPageState extends State<MyAppliancesPage>
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      appBar: TopBar("My Appliances"),
+      appBar: TopBar(title: "My Appliances"),
       backgroundColor: colorFromHex("E8F0F2"),
       body: ListView(
         padding: EdgeInsets.only(left: 20.0),

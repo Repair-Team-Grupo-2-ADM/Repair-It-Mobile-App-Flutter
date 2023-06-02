@@ -29,7 +29,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      appBar: TopBar("Appointments"),
+      appBar: TopBar(title: "Appointments"),
       backgroundColor: colorFromHex("E8F0F2"),
       body: Text(
         "My Appointments",

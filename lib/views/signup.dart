@@ -87,19 +87,19 @@ class _SignupPageState extends State<SignupPage> {
         children: <Widget>[
           Column(children: [
             SizedBox(
-              height: 50,
+              height: 40,
             ),
             const Text(
-              "Safe Technology",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
+              "Repair It",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
             ),
             SizedBox(
-              height: 50,
+              height: 10,
             ),
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
-                  color: colorFromHex('A2DBFA'),
+                  color: colorFromHex('#2196F3'),
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(15.0),
                       bottomRight: Radius.zero,
@@ -112,7 +112,7 @@ class _SignupPageState extends State<SignupPage> {
                     const Text(
                       "Signup",
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 50),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                     ),
                     Form(
                       child: Theme(
@@ -120,9 +120,9 @@ class _SignupPageState extends State<SignupPage> {
                             brightness: Brightness.light,
                             inputDecorationTheme: const InputDecorationTheme(
                                 labelStyle: TextStyle(
-                                    color: Colors.black, fontSize: 20))),
+                                    color: Colors.black, fontSize: 16))),
                         child: Container(
-                          padding: EdgeInsets.all(18),
+                          padding: EdgeInsets.all(8),
                           child: Column(
                             //crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
@@ -148,12 +148,12 @@ class _SignupPageState extends State<SignupPage> {
                                 keyboardType: TextInputType.name,
                               ),
                               const Padding(padding: EdgeInsets.all(5)),
-                              TextFormField(
+/*                              TextFormField(
                                 controller: addressController,
                                 decoration:
                                     const InputDecoration(labelText: "Address"),
                                 keyboardType: TextInputType.streetAddress,
-                              ),
+                              )*/
                               const Padding(padding: EdgeInsets.all(5)),
                               TextFormField(
                                 controller: telephoneController,
@@ -178,7 +178,7 @@ class _SignupPageState extends State<SignupPage> {
                                 keyboardType: TextInputType.text,
                                 obscureText: !_passwordVisible,
                               ),
-                              const Padding(padding: EdgeInsets.only(top: 15)),
+                              const Padding(padding: EdgeInsets.only(top: 8)),
                               TextFormField(
                                 controller: repeatPassController,
                                 decoration: InputDecoration(
@@ -218,11 +218,12 @@ class _SignupPageState extends State<SignupPage> {
                                           },
                                         )
                                       },
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderWidth: 2,
-                                  selectedColor: Colors.blue,
+                                  borderRadius: BorderRadius.circular(20),
+                                  borderWidth: 4,
+                                  fillColor: colorFromHex('#d59957'),
+                                  selectedColor: Colors.black,
                                   selectedBorderColor: Colors.lightBlue,
-                                  splashColor: Color.fromARGB(255, 0, 94, 255),
+                                  splashColor: Color.fromARGB(255, 171, 154, 124),
                                   isSelected: selections),
                               const Padding(padding: EdgeInsets.only(top: 15)),
                               MaterialButton(
@@ -241,7 +242,7 @@ class _SignupPageState extends State<SignupPage> {
                                 },
                                 splashColor: colorFromHex('053742'),
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(7),
+                                  borderRadius: BorderRadius.circular(20),
                                 ),
                               ),
                               SizedBox(height: 10),

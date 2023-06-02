@@ -85,7 +85,7 @@ class _PlansPageState extends State<PlansPage> {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      appBar: TopBar("Plans"),
+      appBar: TopBar(title: "Plans"),
       backgroundColor: colorFromHex("E8F0F2"),
       body: Container(
           width: MediaQuery.of(context).size.width,

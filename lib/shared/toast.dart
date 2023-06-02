@@ -10,7 +10,7 @@ Future<bool?> displayToast(String message) {
         toastLength: Toast.LENGTH_LONG,
         gravity: ToastGravity.BOTTOM,
         timeInSecForIosWeb: 2,
-        backgroundColor: colorFromHex('A2DBFA'),
+        backgroundColor: colorFromHex('#eb097e'),
         textColor: Colors.white,
         fontSize: 14.0);
   }

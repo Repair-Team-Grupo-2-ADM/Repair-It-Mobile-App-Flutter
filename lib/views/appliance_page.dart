@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_safetechnology/shared/clientNavBar.dart';
+import 'package:mobile_safetechnology/shared/topbar.dart';
 
 class AppliancePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: ClientNavBar(),
       backgroundColor: Color(0xFFFCFAF8),
-      body: ListView(
+      body:
+      ListView(
         children: <Widget>[
           SizedBox(
             height: 15.0,
@@ -21,10 +25,10 @@ class AppliancePage extends StatelessWidget {
                 mainAxisSpacing: 15.0,
                 childAspectRatio: 0.8,
                 children: <Widget>[
-                  _buildCard('Dry Machine', 'LG X9000',
-                      'assets/washing_machine_lg.jpg', false, context),
-                  _buildCard('Blender', 'Oster X',
-                      'assets/blender_oster.jpg', false, context),
+                  _buildCard('IPhone', 'IPhone 13',
+                      'assets/iphone.jpg', false, context),
+                  _buildCard('Samsung', 'Samsung S23',
+                      'assets/samsung.jpg', false, context),
                 ],
               ))
         ],
@@ -93,7 +97,7 @@ class AppliancePage extends StatelessWidget {
                                   style: TextStyle(
                                       /*fontFamily: 'Varela',
                                       color: Color(0xFFD17E50),*/
-                                      fontSize: 8.0))
+                                      fontSize: 18.0))
                             ],
                             if (added) ...[
                               Icon(Icons.remove_circle_outline,

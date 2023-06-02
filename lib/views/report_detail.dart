@@ -27,7 +27,7 @@ class _ReportDetailPage extends State<ReportDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: TopBar("Create Report"),
+        appBar: TopBar(title: "Create Report"),
                 bottomNavigationBar: TechNavBar(),
         body: SafeArea(
           minimum: EdgeInsets.only(left: 50.0, right: 50.0, top: 20),

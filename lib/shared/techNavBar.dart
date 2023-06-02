@@ -7,7 +7,7 @@ class TechNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      backgroundColor: colorFromHex("39A2DB"),
+      backgroundColor: colorFromHex("#2196F3"),
       selectedItemColor: Colors.white,
       unselectedItemColor: Colors.white,
       selectedFontSize: 14,

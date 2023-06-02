@@ -31,7 +31,7 @@ class _CreateReportPage extends State<CreateReportPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TopBar("Create Report"),
+      appBar: TopBar(title:"Create Report"),
               bottomNavigationBar: TechNavBar(),
       body: ListView(
         children: <Widget>[

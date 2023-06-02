@@ -78,7 +78,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      appBar: TopBar("Profile"),
+      appBar: TopBar(title: "Profile"),
       backgroundColor: colorFromHex("E8F0F2"),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

@@ -28,7 +28,7 @@ class _ApplianceDetailPage extends State<ApplianceDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: TopBar("Add Appliance"),
+        appBar: TopBar(title: "Add Appliance"),
         bottomNavigationBar: ClientNavBar(),
         body: SafeArea(
           minimum: EdgeInsets.only(left: 50.0, right: 50.0, top: 20),

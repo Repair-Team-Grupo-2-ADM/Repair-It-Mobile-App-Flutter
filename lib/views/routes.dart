@@ -39,7 +39,7 @@ class _RoutesPageState extends State<RoutesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: TopBar("Routes"),
+        appBar: TopBar(title: "Routes"),
         bottomNavigationBar: TechNavBar(),
         body: SafeArea(
                     minimum: EdgeInsets.only(left: 50.0, right: 50.0),

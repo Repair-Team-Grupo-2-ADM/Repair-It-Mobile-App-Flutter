@@ -19,7 +19,7 @@ class _RouteDetailPage extends State<RouteDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TopBar("Route Detail"),
+      appBar: TopBar(title: "Route Detail"),
               bottomNavigationBar: TechNavBar(),
       body: ListView(
         children: <Widget>[

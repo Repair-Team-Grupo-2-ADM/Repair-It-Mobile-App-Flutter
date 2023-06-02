@@ -2,11 +2,13 @@
 
 import 'dart:convert';
 import 'dart:io';
+//import 'dart:js_interop';
 
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:mobile_safetechnology/shared/colorFromHex.dart';
+import 'package:mobile_safetechnology/views/appliance_page.dart';
 import 'package:mobile_safetechnology/views/my_appliances.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -54,19 +56,19 @@ class _LoginPageState extends State<LoginPage> {
           SingleChildScrollView(
             child: Column(children: <Widget>[
               SizedBox(
-                height: 60,
+                height: 40,
               ),
               const Text(
-                "Safe Technology",
+                "Repair It",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 45),
               ),
               SizedBox(
-                height: 45,
+                height: 40,
               ),
               Container(
                 height: MediaQuery.of(context).size.height * 0.80,
                 decoration: BoxDecoration(
-                  color: colorFromHex('A2DBFA'),
+                  color: colorFromHex('#2196F3'),
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(15.0),
                       bottomRight: Radius.zero,
@@ -120,7 +122,7 @@ class _LoginPageState extends State<LoginPage> {
                                 keyboardType: TextInputType.text,
                                 obscureText: !_passwordVisible,
                               ),
-                              const Padding(padding: EdgeInsets.only(top: 38)),
+                              const Padding(padding: EdgeInsets.only(top: 25)),
                               MaterialButton(
                                 height: 50,
                                 minWidth: 225,
@@ -133,6 +135,13 @@ class _LoginPageState extends State<LoginPage> {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 onPressed: () async {
+                                  if((passController.text != '') && (emailController.text != '')){
+                                    Navigator.of(context).pushReplacementNamed('/appliances');
+                                  }
+                                  else {
+                                    displayToast('Por favor ingrese sus datos');
+                                  }
+/*
                                   var isLogedIn = await login(
                                       emailController.text,
                                       passController.text);
@@ -147,16 +156,16 @@ class _LoginPageState extends State<LoginPage> {
                                     else
                                       Navigator.of(context)
                                           .pushReplacementNamed("/routes");
-                                  }
+                                  }*/
                                 },
                                 splashColor: colorFromHex('053742'),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(7),
                                 ),
                               ),
-                              const Padding(padding: EdgeInsets.only(top: 38)),
+                              const Padding(padding: EdgeInsets.only(top: 20)),
                               MaterialButton(
-                                height: 42,
+                                height: 40,
                                 minWidth: 200,
                                 color: Colors.white,
                                 textColor: Colors.black,
@@ -172,9 +181,9 @@ class _LoginPageState extends State<LoginPage> {
                                   borderRadius: BorderRadius.circular(7),
                                 ),
                               ),
-                              const Padding(padding: EdgeInsets.only(top: 15)),
+                              const Padding(padding: EdgeInsets.only(top: 8)),
                               MaterialButton(
-                                height: 42,
+                                height: 40,
                                 minWidth: 200,
                                 color: Colors.white,
                                 textColor: Colors.black,
@@ -190,7 +199,7 @@ class _LoginPageState extends State<LoginPage> {
                                   borderRadius: BorderRadius.circular(7),
                                 ),
                               ),
-                              Padding(padding: EdgeInsets.only(top: 45)),
+                              Padding(padding: EdgeInsets.only(top: 25)),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[

@@ -39,7 +39,7 @@ class _ReportsPageState extends State<ReportsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: TopBar("Reports"),
+        appBar: TopBar(title: "Reports"),
         bottomNavigationBar: TechNavBar(),
         body: SafeArea(
           minimum: EdgeInsets.only(left: 50.0, right: 50.0),
